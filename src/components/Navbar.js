@@ -1,4 +1,6 @@
 import React, { memo } from 'react'
+import PropTypes from 'prop-types'
+
 
 export default memo(function Navbar(props) {
   return (
@@ -27,4 +29,8 @@ export default memo(function Navbar(props) {
   </nav>
   )
 })
+
+Navbar.PropTypes = {title: PropTypes.string,
+  aboutText: PropTypes.string,
+ }
 
