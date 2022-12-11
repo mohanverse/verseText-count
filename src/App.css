@@ -37,5 +37,12 @@
   }
 }
 
+.container{
+  background: rgb(90, 109, 255);
+  border-radius: 0.5rem;
+  color: rgb(11, 11, 11);
+}
+
+
 
 

@@ -24,16 +24,27 @@ export default function TextForm(props) {
   //text = "new Text"; // worng way to change the state 
   //setText("new text") // right way to change the state 
   return (
-    <div>
+    <>
+    <div className='container'>
         <h1>{props.heading}</h1>
-        <div className="mb-3">
+        <div className="mb-4">
           <textarea className="form-control" id="mytext" value={text} onChange={handleOnchange} rows="8"></textarea>
         </div>
-        <div>
-          <button className="btn btn-primary " onClick={handleUpclick} >convert to uppercase</button>
-          
+          <button className="btn btn-primary mx-4" onClick={handleUpclick} >convert to uppercase</button>
+
           <button className="btn btn-primary" onClick={handleDounclick} >convert to lowercase</button>
-        </div>
     </div>
+
+    <div className="container my-3">
+      <h2>Your text summary</h2>
+      <p>{text.split(" ").length} words and {text.length} charecters</p>
+      <p>{0.008 * text.split(" ").length} Reding Time</p>
+      <h2>Preview</h2>
+      <p className='mx-3'>{text}</p>
+
+    </div>
+
+
+    </>
   )
 }
