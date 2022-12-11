@@ -8,19 +8,26 @@ export default function TextForm(props) {
     setText(newText)
   
   }
+  const handleclearclick = ()=>{
+    //console.log("Uppercase was clicked" + text);
+    let newText = '';
+    setText(newText)
+  
+  }
   const handleDounclick = ()=>{
     //console.log("Uppercase was clicked" + text);
     let newText = text.toLowerCase();
     setText(newText)
   
   }
+  
   const handleOnchange = (event)=>{
     console.log("on change");
     setText(event.target.value)
   }
 
 
-  const [text, setText] = useState('Enter text here');
+  const [text, setText] = useState(' ');
   //text = "new Text"; // worng way to change the state 
   //setText("new text") // right way to change the state 
   return (
@@ -32,7 +39,9 @@ export default function TextForm(props) {
         </div>
           <button className="btn btn-primary mx-4" onClick={handleUpclick} >convert to uppercase</button>
 
-          <button className="btn btn-primary" onClick={handleDounclick} >convert to lowercase</button>
+          <button className="btn btn-primary mx-4" onClick={handleDounclick} >convert to lowercase</button>
+
+          <button className="btn btn-primary" onClick={handleclearclick} >clear the textarea</button>
     </div>
 
     <div className="container my-3">
