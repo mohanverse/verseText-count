@@ -29,8 +29,3 @@ export default memo(function Navbar(props) {
   </nav>
   )
 })
-
-Navbar.PropTypes = {title: PropTypes.string,
-  aboutText: PropTypes.string,
- }
-
