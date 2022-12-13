@@ -26,6 +26,12 @@ export default function TextForm(props) {
     setText(event.target.value)
   }
 
+  const handleCopy = ()=>{
+    var text =  document.getElementById('mytext');
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  }
+
 
   const [text, setText] = useState(' ');
   //text = "new Text"; // worng way to change the state 
@@ -41,7 +47,8 @@ export default function TextForm(props) {
 
           <button className="btn btn-primary mx-4" onClick={handleDounclick} >convert to lowercase</button>
 
-          <button className="btn btn-primary" onClick={handleclearclick} >clear the textarea</button>
+          <button className="btn btn-primary mx-4" onClick={handleclearclick} >clear the textarea</button>
+          <button className="btn btn-primary" onClick={handleCopy} >copy text</button>
     </div>
 
     <div className="container my-3">
